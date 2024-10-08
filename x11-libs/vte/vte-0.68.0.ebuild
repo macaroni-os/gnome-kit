@@ -14,7 +14,7 @@ SRC_URI="https://gitlab.gnome.org/GNOME/vte/-/archive/${PV}/vte-${PV}.tar.gz"
 LICENSE="LGPL-2.1+"
 SLOT="2.91"
 # -std=gnu++20 required (gcc-11)
-KEYWORDS="next"
+KEYWORDS="*"
 
 IUSE="+crypt doc debug elogind glade +introspection +vala"
 REQUIRED_USE="vala? ( introspection )"
