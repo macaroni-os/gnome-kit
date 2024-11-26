@@ -14,7 +14,7 @@ LICENSE="LGPL-3"
 SLOT="0"
 KEYWORDS="*"
 
-IUSE="introspection lcms vala cpu_flags_x86_avx2 cpu_flags_x86_f16c cpu_flags_x86_mmx cpu_flags_x86_sse cpu_flags_x86_sse2 cpu_flags_x86_sse3 cpu_flags_x86_sse4_1"
+IUSE="introspection lcms vala cpu_flags_x86_avx2 cpu_flags_x86_f16c cpu_flags_x86_mmx cpu_flags_x86_sse cpu_flags_x86_sse2 cpu_flags_x86_sse4_1"
 REQUIRED_USE="vala? ( introspection )"
 
 BDEPEND="
@@ -26,9 +26,6 @@ RDEPEND="
 	lcms? ( >=media-libs/lcms-2.8:2 )
 "
 DEPEND="${RDEPEND}"
-PATCHES=(
-	"${FILESDIR}"/babl-0.1.78_meson.patch
-)
 
 src_prepare() {
 	default
@@ -51,7 +48,6 @@ src_configure() {
 		$(meson_use cpu_flags_x86_mmx enable-mmx)
 		$(meson_use cpu_flags_x86_sse enable-sse)
 		$(meson_use cpu_flags_x86_sse2 enable-sse2)
-		$(meson_use cpu_flags_x86_sse3 enable-sse3)
 		$(meson_use cpu_flags_x86_sse4_1 enable-sse4_1)
 	)
 	meson_src_configure
