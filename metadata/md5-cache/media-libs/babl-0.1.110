@@ -4,12 +4,12 @@ DEPEND=introspection? ( >=dev-libs/gobject-introspection-1.32:= ) lcms? ( >=medi
 DESCRIPTION=A dynamic, any to any, pixel format conversion library
 EAPI=7
 HOMEPAGE=http://www.gegl.org/babl/
-IUSE=introspection lcms vala cpu_flags_x86_avx2 cpu_flags_x86_f16c cpu_flags_x86_mmx cpu_flags_x86_sse cpu_flags_x86_sse2 cpu_flags_x86_sse3 cpu_flags_x86_sse4_1
+IUSE=introspection lcms vala cpu_flags_x86_avx2 cpu_flags_x86_f16c cpu_flags_x86_mmx cpu_flags_x86_sse cpu_flags_x86_sse2 cpu_flags_x86_sse4_1
 KEYWORDS=*
 LICENSE=LGPL-3
 RDEPEND=introspection? ( >=dev-libs/gobject-introspection-1.32:= ) lcms? ( >=media-libs/lcms-2.8:2 )
 REQUIRED_USE=vala? ( introspection )
 SLOT=0
-SRC_URI=http://ftp.gimp.org/pub/babl/0.1/babl-0.1.78.tar.xz
+SRC_URI=http://ftp.gimp.org/pub/babl/0.1/babl-0.1.110.tar.xz
 _eclasses_=eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	gnome2-utils	532371cfcba45b2ab0d2950547c97d95	meson	05aa1843efaa1d580f7007e5482fc201	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	e7575bc4a90349d76e72777013b2bbc2	python-utils-r1	d3f9ec72badd0291b655682d67876adc	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	vala	5178ebf692407ebb88b1ceaa76872d9d	xdg-utils	14d00d009167652b1fa363e55effe213
-_md5_=9424db91a416e5c6f2f950e57cdfb2fe
+_md5_=b840620dd827489a6321655bb10dd403
