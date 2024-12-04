@@ -1,9 +1,9 @@
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 GNOME3_LA_PUNT="yes"
 VALA_USE_DEPEND="vapigen"
-inherit autotools eutils gnome3 vala ltprune memsaver
+inherit autotools eutils gnome3 vala ltprune memsaver cargo
 
 DESCRIPTION="Scalable Vector Graphics (SVG) rendering library"
 HOMEPAGE="https://wiki.gnome.org/Projects/LibRsvg"
@@ -11,6 +11,8 @@ SRC_URI="{{src_uri}}"
 LICENSE="LGPL-2+"
 SLOT="2"
 KEYWORDS="*"
+
+S="${WORKDIR}/{{ github_user }}-{{ github_repo }}-{{ sha[:7] }}"
 
 IUSE="gtk-doc +introspection +vala"
 REQUIRED_USE="gtk-doc? ( introspection ) vala? ( introspection )"
@@ -32,6 +34,11 @@ DEPEND="${RDEPEND}
 	vala? ( $(vala_depend) )
 	>=virtual/pkgconfig-0-r1
 "
+
+src_unpack() {
+	cargo_src_unpack
+}
+
 src_prepare() {
 	eautoreconf
 	gnome3_src_prepare

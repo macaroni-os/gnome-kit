@@ -1,17 +1,19 @@
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 GNOME3_LA_PUNT="yes"
 VALA_USE_DEPEND="vapigen"
-inherit autotools eutils gnome3 vala ltprune memsaver
+inherit autotools eutils gnome3 vala ltprune memsaver cargo
 
 DESCRIPTION="Scalable Vector Graphics (SVG) rendering library"
 HOMEPAGE="https://wiki.gnome.org/Projects/LibRsvg"
-SRC_URI="https://distfiles.macaronios.org/19/b4/26/19b4264e9cdf0adce4d03a0e24a6159ad1be72f3c7ad48c116ed8eb3e440da1451a5051ede11d56c842ded38194aac3ec3d4fecc74c5dcc2cb067e22faf48f21 -> librsvg-2.54.5.tar.xz
-https://download.gnome.org/sources/librsvg/2.54/librsvg-2.54.5.tar.xz -> librsvg-2.54.5.tar.xz"
+SRC_URI="https://github.com/GNOME/librsvg/tarball/2f7db6161d09cdca8072a66a0bdfd64a46436bfd -> librsvg-2.54.7-2f7db61.tar.gz
+https://distfiles.macaronios.org/41/90/a9/4190a9e4a47e4ebce777c3a47bb52c0e3d04c5a4c2a8f82532261de2d66ce180805ebe647590d7457ea7c681f7434b0bcab9257dbbd8cfcb19e886f0d23c36b5 -> librsvg-2.54.7-funtoo-crates-bundle-af10f4f29778cae8dc554b1e9fdb82daa1f95a2f951122554db0f54503538616d1d5ade3b84d13c745e9ad953c3b1c8d4949bb32d9ea368c341f6ad6594c1e2a.tar.gz"
 LICENSE="LGPL-2+"
 SLOT="2"
 KEYWORDS="*"
+
+S="${WORKDIR}/GNOME-librsvg-2f7db61"
 
 IUSE="gtk-doc +introspection +vala"
 REQUIRED_USE="gtk-doc? ( introspection ) vala? ( introspection )"
@@ -33,6 +35,11 @@ DEPEND="${RDEPEND}
 	vala? ( $(vala_depend) )
 	>=virtual/pkgconfig-0-r1
 "
+
+src_unpack() {
+	cargo_src_unpack
+}
+
 src_prepare() {
 	eautoreconf
 	gnome3_src_prepare

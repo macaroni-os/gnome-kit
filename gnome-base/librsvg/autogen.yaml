@@ -1,0 +1,11 @@
+librsvg_rule:
+  generator: github-1
+  packages:
+    - librsvg:
+        extensions:
+          - rust
+        version: 2.54.7
+        github:
+          user: GNOME
+          repo: librsvg
+          query: tags
