@@ -5,6 +5,8 @@ librsvg_rule:
         extensions:
           - rust
         version: 2.54.7
+        revision:
+          2.54.7: 1
         github:
           user: GNOME
           repo: librsvg

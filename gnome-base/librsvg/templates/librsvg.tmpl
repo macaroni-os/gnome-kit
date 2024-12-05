@@ -65,6 +65,10 @@ src_compile() {
 	gnome3_src_compile
 }
 
+src_install() {
+    gnome3_src_install
+}
+
 pkg_postinst() {
 	# causes segfault if set, see bug 375615
 	unset __GL_NO_DSO_FINALIZER
