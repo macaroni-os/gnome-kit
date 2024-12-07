@@ -8,7 +8,7 @@ inherit meson gnome2-utils vala
 
 DESCRIPTION="A dynamic, any to any, pixel format conversion library"
 HOMEPAGE="http://www.gegl.org/babl/"
-SRC_URI="http://ftp.gimp.org/pub/${PN}/${PV:0:3}/${P}.tar.xz"
+SRC_URI="https://download.gimp.org/pub/${PN}/${PV:0:3}/${P}.tar.xz"
 
 LICENSE="LGPL-3"
 SLOT="0"
