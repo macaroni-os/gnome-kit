@@ -6,9 +6,12 @@ app-crypt
 app-dicts
 app-misc
 dev-cpp
+dev-lang
 dev-libs
 games-arcade
 games-board
 games-puzzle
 gnome-base
 gnome-extra
+mail-client
+media-gfx
