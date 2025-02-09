@@ -27,4 +27,10 @@ net-misc
 net-wireless
 sci-geosciences
 sys-apps
+sys-libs
+virtual
 x11-libs
+x11-misc
+x11-terms
+x11-themes
+x11-wm
