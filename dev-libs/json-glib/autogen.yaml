@@ -1,0 +1,6 @@
+json_glib:
+  packages:
+    - json-glib:
+        stable: even
+        revision:
+          1.8.0: 1
