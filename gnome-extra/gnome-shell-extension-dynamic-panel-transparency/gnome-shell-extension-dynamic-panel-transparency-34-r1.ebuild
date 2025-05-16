@@ -10,7 +10,7 @@ HOMEPAGE="https://github.com/ewlsh/dynamic-panel-transparency/"
 SRC_URI="https://extensions.gnome.org/extension-data/dynamic-panel-transparencyrockon999.github.io.v${PV}.shell-extension.zip -> ${P}.zip"
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="*"
+KEYWORDS="amd64"
 IUSE=""
 EXTENSION_NAME="${MY_PN}@rockon999.github.io"
 
