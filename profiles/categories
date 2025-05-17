@@ -4,6 +4,7 @@ app-arch
 app-cdr
 app-crypt
 app-dicts
+app-editors
 app-misc
 dev-cpp
 dev-lang
