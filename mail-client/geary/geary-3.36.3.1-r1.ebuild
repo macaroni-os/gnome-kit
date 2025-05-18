@@ -28,6 +28,7 @@ CDEPEND="app-crypt/gcr:0=[gtk,introspection]
 	dev-libs/json-glib
 	dev-libs/libxml2:2
 	dev-libs/gmime:3.0[vala]
+	dev-libs/libpeas
 	media-libs/libcanberra
 	net-libs/webkit-gtk:4=[introspection]
 	x11-libs/gtk+:3[introspection]
