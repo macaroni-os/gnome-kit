@@ -93,6 +93,9 @@ src_prepare() {
 		-e '/composite-transform.xml/d' \
 		-i tests/compositions/meson.build || die
 
+	# Ignore warning for svg images (macaroni-os/mark-issues#394)
+	sed -e '/--fatal-warnings/d' -i docs/reference/meson.build || die
+
 	# fix 'build'headers from *.cl on gentoo-hardened, bug 739816
 	pushd "${S}/opencl/" || die
 	for file in *.cl; do
