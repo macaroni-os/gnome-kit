@@ -30,6 +30,11 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 "
 
+PATCHES=(
+	"${FILESDIR}"/taquin_66be44dc20d114e449fc33156e3939fd05dfbb16.patch
+	"${FILESDIR}"/taquin_99dea5e7863e112f33f16e59898c56a4f1a547b3.patch
+)
+
 src_prepare() {
 	gnome3_src_prepare
 	vala_src_prepare
