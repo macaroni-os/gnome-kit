@@ -2,7 +2,7 @@
 
 EAPI=7
 PYTHON_COMPAT=( python3+ )
-VALA_MIN_API_VERSION="0.40"
+VALA_MIN_API_VERSION="0.54"
 
 inherit gnome.org gnome3-utils meson python-r1 vala xdg-utils
 
@@ -51,6 +51,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	default
+	sed -i -e "/  desktop,/d" -e "/  appdata,/d" data/meson.build
 	vala_src_prepare
 	xdg_environment_reset
 }
