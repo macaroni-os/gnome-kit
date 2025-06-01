@@ -3,7 +3,7 @@
 EAPI=7
 inherit gnome3 meson vala
 
-VALA_MAX_API_VERSION=0.46
+VALA_MAX_API_VERSION=0.54
 
 DESCRIPTION="A calculator application for GNOME"
 HOMEPAGE="https://wiki.gnome.org/Apps/Calculator"
