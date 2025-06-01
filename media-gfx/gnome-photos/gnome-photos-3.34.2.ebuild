@@ -1,5 +1,4 @@
 # Distributed under the terms of the GNU General Public License v2
-
 EAPI=7
 PYTHON_COMPAT=( python3+ )
 
@@ -69,6 +68,7 @@ src_prepare() {
 	xdg_src_prepare
 	sed -i -e "/  desktop,/d" -e "/  appdata,/d" data/meson.build
 	sed -i -e "/photos_docdir.*=.*join_paths/s/meson.project_name()/'${PF}'/" meson.build
+	sed -i -e "s|^babl_dep.*|babl_dep = dependency('babl-0.1', 'babl')|g" meson.build
 }
 
 src_configure() {
