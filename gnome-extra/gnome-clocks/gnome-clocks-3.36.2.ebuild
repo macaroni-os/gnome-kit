@@ -30,6 +30,10 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 "
 
+PATCHES=(
+	"${FILESDIR}"/gnome-clocks-vala-0.54.patch
+)
+
 src_prepare() {
 	vala_src_prepare
 	gnome3_src_prepare
