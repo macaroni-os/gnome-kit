@@ -33,11 +33,7 @@ DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
 "
 
-PATCHES=(
-	"${FILESDIR}/${PN}-3.35.90-posix.patch"
-	"${FILESDIR}"/iagno_508c0f94e5f182e50ff61be6e04f72574dee97cb.patch
-	"${FILESDIR}"/iagno_e8a0aeec350ea80349582142c0e8e3cd3f1bce38.patch
-)
+PATCHES=( "${FILESDIR}/${PN}-3.35.90-posix.patch" )
 
 src_prepare() {
 	gnome3_src_prepare
