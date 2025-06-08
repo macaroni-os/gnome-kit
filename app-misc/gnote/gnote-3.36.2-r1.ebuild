@@ -42,9 +42,6 @@ DEPEND="${DEPEND}
 src_prepare() {
 	# Do not alter CFLAGS
 	sed 's/-DDEBUG -g/-DDEBUG/' -i configure.ac configure || die
-	# Fix compilation with GCC11
-	sed -i -e 's|^#include "abstractaddin.hpp"|#include <cstddef>\n#include "abstractaddin.hpp"|g' \
-		src/abstractaddin.cpp || die
 
 	# Prevent m4_copy error when running aclocal, bug #581308
 	# m4_copy: won't overwrite defined macro: glib_DEFUN
