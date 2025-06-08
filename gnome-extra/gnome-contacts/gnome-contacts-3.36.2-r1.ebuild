@@ -52,11 +52,6 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 "
 
-PATCHES=(
-	"${FILESDIR}"/gnome-contacts-3.36.2_22ac2c6fecc98efd11d96dc3e04938b8777a3510.patch
-	"${FILESDIR}"/gnome-contacts-3.36.2_mr109.patch
-)
-
 src_prepare() {
 	vala_src_prepare
 	gnome3_src_prepare
