@@ -42,9 +42,6 @@ BDEPEND="
 		app-text/docbook-xml-dtd:4.3 )
 "
 # test? ( dev-util/valgrind )
-PATCHES=(
-	"${FILESDIR}"/gnome-software-fwupd2.patch
-)
 
 src_prepare() {
 	xdg_src_prepare
