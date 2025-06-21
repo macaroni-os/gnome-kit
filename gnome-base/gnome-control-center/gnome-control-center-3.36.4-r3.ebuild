@@ -97,7 +97,11 @@ RDEPEND="${COMMON_DEPEND}
 	elogind? ( sys-auth/elogind )
 	systemd? ( >=sys-apps/systemd-186:0= )
 	!systemd? ( app-admin/openrc-settingsd )
+	media-fonts/sedgwick-ave-display
 "
+# The sedwick-ave-display is needed for correctly
+# draw the macaroni os logo.
+
 # PDEPEND to avoid circular dependency
 PDEPEND=">=gnome-base/gnome-session-2.91.6-r1"
 
