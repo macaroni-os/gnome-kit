@@ -136,6 +136,8 @@ src_prepare() {
 }
 
 src_configure() {
+	export PKG_CONFIG_PATH=/usr/lib/pkgconfig
+
 	local myconf=(
 		$(use_enable aqua quartz-backend)
 		$(use_enable broadway broadway-backend)
@@ -163,7 +165,7 @@ src_configure() {
 		# grok so well during install (// between $EPREFIX and usr ...)
 		# TODO: Is this still the case?
 		--libdir="${EPREFIX}"/usr/$(get_libdir)
-		CUPS_CONFIG="${EPREFIX}/usr/bin/${CHOST}-cups-config"
+		CUPS_CONFIG="/usr/bin/pkg-config cups"
 	)
 
 	if use wayland; then
