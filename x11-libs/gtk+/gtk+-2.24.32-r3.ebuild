@@ -171,9 +171,6 @@ src_prepare() {
 	# Upstream gtk-2-24 branch up to 2018-09-08 state, bug #650536 safety
 	eapply "${FILESDIR}"/patches
 
-	# Fix compilation with cups 2.x
-	eapply "${FILESDIR}"/${PN}-2.0-cups2.patch
-
 	eautoreconf
 	gnome3_src_prepare
 }

@@ -1,0 +1,33 @@
+diff --git a/modules/printbackends/cups/gtkcupsutils.c b/modules/printbackends/cups/gtkcupsutils.c
+index dbf9d51..fdea70d 100644
+--- a/modules/printbackends/cups/gtkcupsutils.c
++++ b/modules/printbackends/cups/gtkcupsutils.c
+@@ -83,28 +83,6 @@ static GtkCupsRequestStateFunc get_states[] = {
+   _get_read_data
+ };
+ 
+-#ifndef HAVE_CUPS_API_1_6
+-#define ippSetOperation(ipp_request, ipp_op_id) ipp_request->request.op.operation_id = ipp_op_id
+-#define ippSetRequestId(ipp_request, ipp_rq_id) ipp_request->request.op.request_id = ipp_rq_id
+-#define ippSetState(ipp_request, ipp_state) ipp_request->state = ipp_state
+-#define ippGetString(attr, index, foo) attr->values[index].string.text
+-#define ippGetCount(attr) attr->num_values
+-
+-int
+-ippSetVersion (ipp_t *ipp,
+-               int    major,
+-               int    minor)
+-{
+-  if (!ipp || major < 0 || minor < 0)
+-    return 0;
+-
+-  ipp->request.any.version[0] = major;
+-  ipp->request.any.version[1] = minor;
+-
+-  return 1;
+-}
+-#endif
+-
+ static void
+ gtk_cups_result_set_error (GtkCupsResult    *result,
+                            GtkCupsErrorType  error_type,
