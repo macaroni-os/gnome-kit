@@ -43,6 +43,10 @@ src_configure() {
 	)
 	meson_src_configure
 }
+src_install() {
+	meson_src_install
+	rm "${D}/usr/share/glib-2.0/schemas/org.gnome.nm-applet.gschema.xml" || die
+}
 
 
 # vim: filetype=ebuild
