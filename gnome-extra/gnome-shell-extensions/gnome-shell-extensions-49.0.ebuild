@@ -26,7 +26,7 @@ RDEPEND="${CDEPEND}
 	app-accessibility/at-spi2-core[introspection]
 	dev-libs/gjs
 	dev-libs/gobject-introspection:=
-	gnome-base/gnome-menu[introspection]
+	gnome-base/gnome-menus[introspection]
 	x11-libs/libadwaita[introspection]
 	media-libs/clutter:1.0[introspection]
 	media-libs/graphene[introspection]
