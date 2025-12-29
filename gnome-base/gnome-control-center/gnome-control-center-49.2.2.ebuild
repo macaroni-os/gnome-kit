@@ -23,7 +23,6 @@ BDEPEND="${PYTHON_DEPS}
 	x11-base/xorg-proto
 	dev-libs/libxml2:2
 	dev-util/gdbus-codegen
-	dev-util/glib-utils
 	dev-util/blueprint-compiler
 	sys-devel/gettext
 	virtual/pkgconfig
