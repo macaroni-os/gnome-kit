@@ -46,7 +46,6 @@ RDEPEND="
 		x11-libs/libX11
 		x11-libs/libXext
 		x11-libs/libXdamage
-		x11-proto/inputproto
 		>=x11-libs/libXi-1.3
 		>=x11-libs/libXcomposite-0.4 )
 	wayland? (
@@ -55,6 +54,7 @@ RDEPEND="
 		x11-libs/gdk-pixbuf:2 )
 "
 DEPEND="${RDEPEND}
+	x11-base/xorg-proto
 	>=dev-util/gtk-doc-am-1.20
 	>=sys-devel/gettext-0.17
 	virtual/pkgconfig
