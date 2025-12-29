@@ -27,7 +27,7 @@ RDEPEND="
 	>=dev-libs/atk-2.5.3[introspection?]
 	>=dev-libs/json-glib-0.12[introspection?]
 	>=media-libs/cogl-1.21.2:1.0=[introspection?,pango]
-	>=x11-libs/cairo-1.16.0:=[aqua?,glib]
+	>=x11-libs/cairo-1.16.0:=[glib]
 	>=x11-libs/pango-1.44.7[introspection?]
 
 	virtual/opengl
@@ -39,11 +39,11 @@ RDEPEND="
 		>=virtual/libgudev-136
 		x11-libs/libxkbcommon
 	)
-	gtk? ( >=x11-libs/gtk+-3.24.12:3[aqua?] )
-	introspection? ( >=dev-libs/gobject-introspection-1.62.0:= )
+	gtk? ( >=x11-libs/gtk+:3 )
+	introspection? ( dev-libs/gobject-introspection:= )
 	X? (
 		media-libs/fontconfig
-		>=x11-libs/libX11-1.3.1
+		x11-libs/libX11
 		x11-libs/libXext
 		x11-libs/libXdamage
 		x11-proto/inputproto
