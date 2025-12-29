@@ -71,7 +71,6 @@ DEPEND="${COMMON_DEPEND}
 	dev-libs/libxslt
 	dev-libs/gobject-introspection-common
 	>=dev-util/gdbus-codegen-2.48
-	dev-util/glib-utils
 	>=dev-util/gtk-doc-am-1.20
 	doc? (	>=dev-util/gtk-doc-1.20
 			app-text/docbook-xml-dtd:4.3 )

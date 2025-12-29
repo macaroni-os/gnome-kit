@@ -116,7 +116,6 @@ BDEPEND="
 	${PYTHON_DEPS}
 	${RUBY_DEPS}
 	>=app-accessibility/at-spi2-core-2.5.3
-	dev-util/glib-utils
 	>=dev-util/gperf-3.0.1
 	>=sys-devel/bison-2.4.3
 	|| ( >=sys-devel/gcc-7.3 >=sys-devel/clang-5 )

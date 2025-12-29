@@ -47,7 +47,6 @@ BDEPEND="
 	dev-libs/appstream-glib
 	dev-util/desktop-file-utils
 	dev-util/gdbus-codegen
-	dev-util/glib-utils
 	dev-util/itstool
 	>=sys-devel/gettext-0.19.8
 	virtual/pkgconfig

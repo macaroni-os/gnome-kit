@@ -21,7 +21,6 @@ BDEPEND="
 	~app-text/docbook-xml-dtd-4.1.2
 	app-text/docbook-xsl-stylesheets
 	dev-libs/libxslt
-	dev-util/glib-utils
 	gtk-doc? ( >=dev-util/gi-docgen-2021.6 )
 	>=sys-devel/gettext-0.18
 	virtual/pkgconfig

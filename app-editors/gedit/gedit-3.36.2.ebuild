@@ -45,7 +45,6 @@ RDEPEND="${DEPEND}
 BDEPEND="
 	${vala_depend}
 	app-text/docbook-xml-dtd:4.1.2
-	dev-util/glib-utils
 	gtk-doc? ( >=dev-util/gtk-doc-1 )
 	dev-util/itstool
 	>=sys-devel/gettext-0.18

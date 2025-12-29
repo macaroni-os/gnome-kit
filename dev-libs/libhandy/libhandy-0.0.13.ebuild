@@ -28,7 +28,6 @@ DEPEND="${RDEPEND}"
 BDEPEND="
 	vala? ( $(vala_depend) )
 	dev-libs/libxml2:2
-	dev-util/glib-utils
 	>=sys-devel/gettext-0.19.8
 	virtual/pkgconfig
 	gtk-doc? ( dev-util/gtk-doc

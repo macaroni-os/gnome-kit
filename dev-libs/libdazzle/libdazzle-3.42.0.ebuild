@@ -20,12 +20,10 @@ RDEPEND="
 	introspection? ( dev-libs/gobject-introspection:= )
 "
 DEPEND="${RDEPEND}"
-# libxml2 required for glib-compile-resources; glib-utils for glib-mkenums
 BDEPEND="
 	>=dev-util/meson-0.49.0
 	$(vala_depend)
 	dev-libs/libxml2:2
-	dev-util/glib-utils
 	>=sys-devel/gettext-0.19.8
 	virtual/pkgconfig
 	gtk-doc? ( dev-util/gtk-doc )

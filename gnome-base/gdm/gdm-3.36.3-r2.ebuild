@@ -81,7 +81,6 @@ RDEPEND="${COMMON_DEPEND}
 DEPEND="${COMMON_DEPEND}
 	app-text/docbook-xml-dtd:4.1.2
 	dev-util/gdbus-codegen
-	dev-util/glib-utils
 	>=dev-util/intltool-0.40.0
 	dev-util/itstool
 	>=sys-devel/gettext-0.19.8
