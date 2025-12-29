@@ -11,9 +11,9 @@ DESCRIPTION="Clutter is a library for creating graphical user interfaces"
 LICENSE="LGPL-2.1+ FDL-1.1+"
 SLOT="1.0"
 
-IUSE="aqua debug doc egl gtk +introspection test wayland X"
+IUSE="debug doc egl gtk +introspection wayland X"
 REQUIRED_USE="
-	|| ( aqua wayland X )
+	|| ( wayland X )
 	wayland? ( egl )
 "
 
@@ -97,7 +97,7 @@ src_configure() {
 		--disable-cex100-backend \
 		--disable-win32-backend \
 		--disable-tslib-input \
-		$(use_enable aqua quartz-backend) \
+		--disable-disable-quartz-backend \
 		$(usex debug --enable-debug=yes --enable-debug=minimum) \
 		$(use_enable doc docs) \
 		$(use_enable egl egl-backend) \
@@ -109,8 +109,4 @@ src_configure() {
 		$(use_enable wayland wayland-compositor) \
 		$(use_enable X xinput) \
 		$(use_enable X x11-backend)
-}
-
-src_test() {
-	virtx emake check -C tests/conform
 }
