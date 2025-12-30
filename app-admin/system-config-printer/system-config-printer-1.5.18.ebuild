@@ -42,6 +42,8 @@ RDEPEND="${CDEPEND}
 "
 DEPEND="${CDEPEND}
 "
+BDEPEND="app-text/xmlto
+"
 src_configure() {
 	local myeconfargs=(
 	  --with-xmlto
