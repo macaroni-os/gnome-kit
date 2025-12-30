@@ -26,6 +26,7 @@ RDEPEND="!gui-libs/tepl
 	dev-libs/libgedit-amtk:=[introspection]
 	dev-libs/libgedit-gfls
 	dev-libs/icu:=
+	dev-libs/libhandy
 	gnome-base/gsettings-desktop-schemas
 	dev-libs/gobject-introspection:=
 	
