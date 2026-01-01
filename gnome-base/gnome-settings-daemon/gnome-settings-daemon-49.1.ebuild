@@ -3,7 +3,7 @@
 
 EAPI=7
 PYTHON_COMPAT=( python3+ )
-inherit meson python-any-r1 udev xdg
+inherit gnome3 meson python-any-r1 udev xdg
 
 DESCRIPTION="Gnome Settings Daemon"
 HOMEPAGE="https://gitlab.gnome.org/GNOME/gnome-settings-daemon"
