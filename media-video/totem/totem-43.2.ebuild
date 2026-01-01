@@ -79,6 +79,7 @@ src_configure() {
 	for card in /dev/dri/card* ; do
 	  addpredict "${card}"
 	done
+	addpredict /proc/self/task
 	local emesonargs=(
 	  -Dhelp=true
 	  -Denable-easy-codec-installation=yes
