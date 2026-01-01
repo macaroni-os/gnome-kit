@@ -2,7 +2,7 @@
 # Autogen by MARK Devkit
 
 EAPI=7
-inherit meson gnome3 systemd
+inherit gnome3 meson systemd
 
 DESCRIPTION=""
 HOMEPAGE="https://gitlab.gnome.org/GNOME/xdg-desktop-portal-gnome"
