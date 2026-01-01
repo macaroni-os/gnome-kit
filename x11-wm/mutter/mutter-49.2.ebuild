@@ -36,7 +36,7 @@ BDEPEND="dev-util/wayland-scanner
 	)
 	
 "
-RDEPEND="media-libs/graphene[introspection?]
+RDEPEND=">=media-libs/graphene-1.10.2[introspection?]
 	x11-libs/gdk-pixbuf
 	x11-libs/pango[introspection?]
 	x11-libs/cairo[X]
