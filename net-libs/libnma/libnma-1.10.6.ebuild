@@ -35,6 +35,8 @@ src_prepare() {
 	gnome3_src_prepare
 }
 src_configure() {
+	# Fix sandboxes issues on configure
+	addpredict /proc/self/task
 	local emesonargs=(
 	  $(meson_use gtk4 libnma_gtk4)
 	  $(meson_use gcr)
