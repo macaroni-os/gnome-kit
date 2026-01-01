@@ -34,6 +34,12 @@ RDEPEND="dev-libs/glib:2
 "
 DEPEND="${RDEPEND}
 "
+src_prepare() {
+	# Drop vte subproject. We use our package
+	# with elogind patch.
+	default
+	rm -rf subprojects/vte || die
+}
 src_configure() {
 	# Upstream don't support LTO
 	filter-lto
