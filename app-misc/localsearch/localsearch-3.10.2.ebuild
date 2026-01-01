@@ -49,7 +49,7 @@ RDEPEND="app-misc/tinysparql
 	  media-libs/gstreamer:1.0
 	  media-libs/gst-plugins-base:1.0
 	)
-	media-video/ffmpeg:0=
+	>=media-video/ffmpeg-8.0.1:0=
 	
 "
 DEPEND="${RDEPEND}
