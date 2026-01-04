@@ -34,7 +34,6 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}
 	dev-lang/perl
-	dev-util/glib-utils
 	>=dev-util/gtk-doc-am-1.32
 	>=dev-util/intltool-0.51
 	virtual/perl-Compress-Raw-Zlib
