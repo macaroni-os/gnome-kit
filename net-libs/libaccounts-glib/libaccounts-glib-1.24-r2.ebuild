@@ -28,7 +28,6 @@ DEPEND="${RDEPEND}"
 BDEPEND="
 	$(vala_depend)
 	dev-util/gdbus-codegen
-	dev-util/glib-utils
 	dev-libs/check
 	doc? ( dev-util/gtk-doc )
 "
