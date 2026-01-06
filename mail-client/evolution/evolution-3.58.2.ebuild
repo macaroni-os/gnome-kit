@@ -49,7 +49,7 @@ RDEPEND="app-crypt/libsecret
 	  media-libs/libchamplain[gtk]
 	  media-libs/clutter:1.0
 	  media-libs/clutter-gtk:1.0
-	  sci-geosciences/geocode-glib:2
+	  sci-geosciences/geocode-glib
 	)
 	ldap? ( net-dns/openldap:= )
 	libnotify? ( x11-libs/libnotify )
@@ -60,7 +60,7 @@ RDEPEND="app-crypt/libsecret
 	)
 	ssl? (
 	  dev-libs/libgweather
-	  sci-geosciences/geocode-glib:2
+	  sci-geosciences/geocode-glib
 	)
 	ytnef? ( net-mail/ytnef )
 	highlight? ( app-text/highlight )
