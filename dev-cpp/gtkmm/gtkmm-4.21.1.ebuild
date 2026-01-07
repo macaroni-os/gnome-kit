@@ -24,7 +24,7 @@ BDEPEND="virtual/pkgconfig
 RDEPEND="dev-cpp/glibmm:2
 	x11-libs/gtk:4
 	dev-cpp/cairomm:1
-	dev-cpp/pangomm
+	dev-cpp/pangomm:2.48
 	x11-libs/gdk-pixbuf
 	media-libs/libepoxy
 	
