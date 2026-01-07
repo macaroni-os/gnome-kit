@@ -76,7 +76,7 @@ src_prepare() {
 }
 src_configure() {
 	# work around sandbox violation
-	for card in /dev/dri/card* ; do
+	for card in /dev/dri/{card,render}* ; do
 	  addpredict "${card}"
 	done
 	addpredict /proc/self/task
