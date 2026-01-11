@@ -65,6 +65,7 @@ src_configure() {
 	for video in /dev/video* ; do
 	  addpredict "${video}"
 	done
+	addpredict /proc/self/task
 	local emesonargs=(
 	  $(meson_use introspection)
 	  -Dtests=false
