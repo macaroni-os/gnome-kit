@@ -3,7 +3,7 @@
 
 EAPI=7
 PYTHON_COMPAT=( python3+ )
-inherit meson python-any-r1 vala gnome3
+inherit gnome3 meson python-any-r1 vala
 
 DESCRIPTION="A framework for easy media discovery and browsing"
 HOMEPAGE="https://gitlab.gnome.org/GNOME/grilo"
