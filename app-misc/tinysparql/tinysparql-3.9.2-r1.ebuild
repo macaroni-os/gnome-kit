@@ -59,16 +59,8 @@ src_configure() {
 	  -Dunicode_support=icu
 	  -Dbash_completion_dir="$(get_bashcompdir)"
 	  -Dintrospection=enabled
+	  -Dsystemd_user_services_dir="$(systemd_get_userunitdir)"
 	)
-	if use systemd ; then
-	  emesonargs+=(
-	    -Dsystemd_user_services_dir="$(systemd_get_userunitdir)"
-	  )
-	else
-	  emesonargs+=(
-	    -Dsystemd_user_services_dir=false
-	  )
-	fi
 	meson_src_configure
 }
 src_install() {
@@ -76,6 +68,9 @@ src_install() {
 	if use gtk-doc; then
 	  mkdir -p "${ED}"/usr/share/gtk-doc/html/ || die
 	  mv "${ED}"/usr/share/doc/Tsparql-3.0 "${ED}"/usr/share/gtk-doc/html/ || die
+	fi
+	if ! use systemd ; then
+	  rm -vrf "${ED}$(systemd_get_userunitdir)" || die
 	fi
 }
 pkg_postinst() {
