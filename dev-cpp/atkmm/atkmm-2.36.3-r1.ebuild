@@ -21,7 +21,7 @@ BDEPEND="virtual/pkgconfig
 	${PYTHON_DEPS}
 	
 "
-RDEPEND="dev-cpp/glibmm:2[gtk-doc?]
+RDEPEND="dev-cpp/glibmm:2.68[gtk-doc?]
 	>=dev-libs/atk-2.58.0
 	dev-libs/libsigc++
 	
