@@ -17,9 +17,7 @@ CDEPEND="media-libs/libepoxy
 	papers? (
 	  app-text/papers
 	)
-	!papers? (
-	  app-text/evince[introspection]
-	)
+	app-text/evince[introspection]
 	media-libs/freetype
 	x11-libs/gdk-pixbuf[introspection]
 	dev-libs/glib:2
