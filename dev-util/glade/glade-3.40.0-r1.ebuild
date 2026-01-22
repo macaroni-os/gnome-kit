@@ -41,7 +41,7 @@ RDEPEND="app-accessibility/at-spi2-core[introspection?]
 	    dev-python/pygobject:3[${PYTHON_USEDEP}]
 	  ')
 	)
-	webkit? ( net-libs/webkit-gtk:4.1 )
+	webkit? ( net-libs/webkit-gtk:4 )
 	
 "
 DEPEND="${RDEPEND}
@@ -50,6 +50,8 @@ pkg_setup() {
 	use python && python-single-r1_pkg_setup
 }
 src_configure() {
+	# Fix integration with webkit-4.1
+	sed -e 's|webkit2gtk-4.0|webkit2gtk-4.1|g' -i meson.build || die
 	use X || append-cppflags -DGENTOO_GTK_HIDE_X11
 	use wayland || append-cppflags -DGENTOO_GTK_HIDE_WAYLAND
 	local emesonargs=(
