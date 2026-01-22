@@ -70,6 +70,11 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	use vala && vala_src_prepare
 	cmake_src_prepare
+	# Make CMakeLists versioned vala enabled
+	sed -e "s;\(find_program(VALAC\) valac);\1 ${VALAC});" \
+	  -e "s;\(find_program(VAPIGEN\) vapigen);\1 ${VAPIGEN});" \
+	  -i "${S}"/CMakeLists.txt || die
+
 }
 src_configure() {
 	local mycmakeargs=(
