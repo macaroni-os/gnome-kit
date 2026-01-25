@@ -33,7 +33,6 @@ RDEPEND="${DEPEND}
 "
 BDEPEND="
 	dev-libs/glib
-	dev-util/glib-utils
 	gtk-doc? ( >=dev-util/gtk-doc-1.20
 		app-text/docbook-xml-dtd:4.1.2 )
 	>=sys-devel/gettext-0.19.8
