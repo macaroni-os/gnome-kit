@@ -30,7 +30,6 @@ RDEPEND="
 DEPEND="${RDEPEND}"
 BDEPEND="
 	${PYTHON_DEPS}
-	dev-util/glib-utils
 	>=dev-util/gtk-doc-am-1.10
 	>=dev-util/intltool-0.35
 	virtual/pkgconfig
