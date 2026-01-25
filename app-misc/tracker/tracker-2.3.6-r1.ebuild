@@ -31,7 +31,6 @@ RDEPEND="
 	sys-apps/util-linux
 "
 DEPEND="${RDEPEND}
-	dev-util/glib-utils
 	>=dev-util/intltool-0.40.0
 	$(vala_depend)
 	gtk-doc? ( >=dev-util/gtk-doc-1.8
