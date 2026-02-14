@@ -14,7 +14,7 @@ KEYWORDS="*"
 IUSE="gtk-doc"
 BDEPEND="virtual/pkgconfig
 	gtk-doc? (
-	  app-text/doxygen[dot]
+	  app-doc/doxygen[dot]
 	  dev-lang/perl
 	  dev-libs/libxslt
 	)
