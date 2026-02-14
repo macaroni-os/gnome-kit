@@ -15,7 +15,7 @@ IUSE="gtk-doc"
 BDEPEND="virtual/pkgconfig
 	gtk-doc? (
 	  dev-cpp/mm-common
-	  app-text/doxygen[dot]
+	  app-doc/doxygen[dot]
 	  dev-libs/libxslt
 	)
 	${PYTHON_DEPS}
