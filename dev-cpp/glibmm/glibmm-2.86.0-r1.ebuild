@@ -15,7 +15,7 @@ IUSE="gtk-doc debug"
 BDEPEND="${PYTHON_DEPS}
 	virtual/pkgconfig
 	gtk-doc? (
-	  app-text/doxygen
+	  app-doc/doxygen
 	  dev-lang/perl
 	  dev-libs/libxslt
 	)
