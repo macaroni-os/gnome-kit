@@ -14,7 +14,7 @@ KEYWORDS="*"
 IUSE="gtk-doc examples"
 BDEPEND="virtual/pkgconfig
 	gtk-doc? (
-	  app-text/doxygen[dot]
+	  app-doc/doxygen[dot]
 	  media-gfx/graphviz
 	  dev-libs/libxslt
 	  dev-lang/perl
