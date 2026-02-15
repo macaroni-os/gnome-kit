@@ -10,7 +10,7 @@ LICENSE="LGPL-2.1-or-later OR MPL-2.0"
 SLOT="0"
 KEYWORDS="*"
 IUSE="doc"
-BDEPEND="doc? ( app-text/doxygen[dot] )
+BDEPEND="doc? ( app-doc/doxygen[dot] )
 	
 "
 RDEPEND="sys-libs/zlib
