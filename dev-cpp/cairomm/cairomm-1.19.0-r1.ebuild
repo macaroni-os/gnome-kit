@@ -16,7 +16,7 @@ BDEPEND="virtual/pkgconfig
 	gtk-doc? (
 	  ${PYTHON_DEPS}
 	  dev-cpp/mm-common
-	  app-text/doxygen[dot]
+	  app-doc/doxygen[dot]
 	  dev-libs/libxslt
 	)
 	
