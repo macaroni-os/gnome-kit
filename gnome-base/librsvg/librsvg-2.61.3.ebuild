@@ -57,6 +57,10 @@ src_configure() {
 }
 src_install() {
 	meson_src_install
+	# See mark-issues/issues#579
+	# Add link to fix upstream bug
+	dosym /usr/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader_svg.so \
+		/usr/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-svg.so
 }
 pkg_postinst() {
 	# causes segfault if set, see bug 375615
