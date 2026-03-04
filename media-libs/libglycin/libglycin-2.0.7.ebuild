@@ -27,11 +27,6 @@ RDEPEND="dev-libs/glib:2
 	sys-libs/libseccomp
 	heif? ( >=media-libs/libheif-1.17.0:= )
 	jpegxl? ( media-libs/libjxl:= )
-	svg? (
-	  gnome-base/librsvg:2
-	  x11-libs/cairo
-	)
-	
 "
 DEPEND="${RDEPEND}
 "
