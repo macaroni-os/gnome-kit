@@ -22,16 +22,13 @@ PATCHES=(
 	"${FILESDIR}/bump-rustix-libc-crate.patch"
 	"${FILESDIR}/glycin-glibc-2.33.patch"
 )
-IUSE="heif jpeg2k jpegxl svg debug +vala"
+IUSE="heif jpeg2k jpegxl svg debug +vala gtk4"
 RDEPEND="dev-libs/glib:2
 	sys-libs/libseccomp
 	heif? ( >=media-libs/libheif-1.17.0:= )
+"
+PDEPEND="
 	jpegxl? ( media-libs/libjxl:= )
-	svg? (
-	  gnome-base/librsvg:2
-	  x11-libs/cairo
-	)
-	
 "
 DEPEND="${RDEPEND}
 "
@@ -68,8 +65,8 @@ src_configure() {
 	  -Dloaders="${formats_s// /,}"
 	  -Dtests=false
 	  -Dlibglycin=true
-	  -Dlibglycin-gtk4=false
 	  -Dglycin-thumbnailer=false
+	  $(meson_use gtk4 libglycin-gtk4)
 	)
 	meson_src_configure
 	ln -s "${CARGO_HOME}" "${BUILD_DIR}/cargo-home" || die
