@@ -26,6 +26,7 @@ IUSE="heif jpeg2k jpegxl svg debug +vala gtk4"
 RDEPEND="dev-libs/glib:2
 	sys-libs/libseccomp
 	heif? ( >=media-libs/libheif-1.17.0:= )
+	media-libs/lcms
 "
 PDEPEND="
 	jpegxl? ( media-libs/libjxl:= )
