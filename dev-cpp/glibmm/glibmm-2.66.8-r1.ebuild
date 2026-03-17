@@ -21,7 +21,7 @@ BDEPEND="${PYTHON_DEPS}
 	
 "
 RDEPEND="dev-libs/glib:2
-	dev-libs/libsigc++
+	dev-libs/libsigc++:2
 	
 "
 DEPEND="${RDEPEND}
