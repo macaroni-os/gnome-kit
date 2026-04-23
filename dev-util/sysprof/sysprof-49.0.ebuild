@@ -11,7 +11,7 @@ LICENSE="GPL-3+ GPL-2+"
 SLOT="0"
 KEYWORDS="*"
 IUSE="gtk systemd"
-BDEPEND="dev-lbis/appstream-glib
+BDEPEND="dev-libs/appstream-glib
 	dev-util/gdbus-codegen
 	sys-devel/gettext
 	sys-kernel/linux-headers
