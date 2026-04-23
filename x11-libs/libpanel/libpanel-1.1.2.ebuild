@@ -20,7 +20,7 @@ BDEPEND="gtk-doc? ( dev-util/gi-docgen )
 "
 RDEPEND="dev-libs/glib:2
 	x11-libs/gtk:4[introspection?]
-	x11-libs/libadwaita:1
+	x11-libs/libadwaita
 	introspection? ( dev-libs/gobject-introspection:= )
 	
 "
