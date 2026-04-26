@@ -70,7 +70,6 @@ src_configure() {
 	  $(meson_use cups)
 	  $(meson_use networkmanager network_manager)
 	  $(meson_use smartcard)
-	  $(meson_use wayland xwayland)
 	  $(meson_use modemmanager wwan)
 	)
 	meson_src_configure
