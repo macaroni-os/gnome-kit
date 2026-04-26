@@ -12,7 +12,7 @@ LICENSE="GPL-2+ LGPL-2+"
 SLOT="0"
 KEYWORDS="*"
 IUSE="+colord +cups elogind +input_devices_wacom modemmanager +networkmanager
-smartcard systemd wayland
+smartcard systemd wayland usbguard
 "
 REQUIRED_USE="^^ ( elogind systemd )
 "
@@ -51,7 +51,7 @@ RDEPEND="sci-geosciences/geocode-glib
 	media-libs/fontconfig
 	elogind? ( sys-auth/elogind )
 	systemd? ( sys-apps/systemd )
-	sys-apps/usbguard
+	usbguard? ( sys-apps/usbguard )
 	
 "
 pkg_setup() {
@@ -64,7 +64,6 @@ src_configure() {
 	  -Dgudev=true
 	  -Dgcr3=false
 	  -Drfkill=true
-	  -Dx11=true
 	  $(meson_use systemd)
 	  $(meson_use elogind)
 	  $(meson_use colord)
