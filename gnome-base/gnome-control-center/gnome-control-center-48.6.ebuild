@@ -107,7 +107,6 @@ src_configure() {
 	append-flags -fno-strict-aliasing
 	filter-lto
 	local emesonargs=(
-	  $(meson_use X x11)
 	  $(meson_use ibus)
 	  -Ddeprecated-declarations=disabled
 	  -Ddocumentation=true # manpage
