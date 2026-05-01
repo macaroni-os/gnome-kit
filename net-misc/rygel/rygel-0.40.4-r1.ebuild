@@ -41,7 +41,6 @@ RDEPEND="dev-libs/glib
 	tracker? ( app-misc/tracker:= )
 	transcode? (
 	  media-libs/gst-plugins-bad:1.0
-	  media-plugins/gst-plugins-twolame:1.0
 	  media-plugins/gst-plugins-libav:1.0
 	)
 	X? ( x11-libs/gtk+:3 )
