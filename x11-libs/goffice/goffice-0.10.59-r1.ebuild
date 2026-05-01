@@ -22,7 +22,7 @@ RDEPEND="
 	dev-libs/libxslt
 	>=gnome-base/librsvg-2.46.4:2
 	>=gnome-extra/libgsf-1.14.46:=[introspection?]
-	>=x11-libs/cairo-1.16.0:=[svg]
+	x11-libs/cairo:=
 	>=x11-libs/gdk-pixbuf-2.40.0:2
 	>=x11-libs/gtk+-3.24.13:3
 	>=x11-libs/pango-1.44.7:=
