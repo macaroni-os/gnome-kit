@@ -24,7 +24,7 @@ BDEPEND="gtk-doc? (
 	
 "
 RDEPEND="dev-libs/glib:2
-	dev-libs/libpeas[gtk]
+	dev-libs/libpeas:0[gtk]
 	gnome-base/gnome-desktop
 	gnome-base/gsettings-desktop-schemas
 	x11-misc/shared-mime-info
