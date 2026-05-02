@@ -20,7 +20,7 @@ CDEPEND="dev-libs/glib:2
 	dev-libs/libgedit-amtk:=
 	dev-libs/libgedit-tepl
 	dev-libs/libgedit-gtksourceview
-	dev-libs/libpeas[gtk]
+	dev-libs/libpeas:0[gtk]
 	dev-libs/gobject-introspection:=
 	app-text/gspell:=
 	python? (
