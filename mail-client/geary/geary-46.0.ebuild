@@ -10,9 +10,6 @@ SRC_URI="https://download.gnome.org/sources/geary/46/geary-46.0.tar.xz -> geary-
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="*"
-PATCHES=(
-	"${FILESDIR}/geary_30105fd4c210c8ba4e875ab003cd393064ded894.patch"
-)
 IUSE="nls"
 # Commons depends
 CDEPEND="app-crypt/gcr:0=[gtk,introspection]
@@ -28,7 +25,7 @@ CDEPEND="app-crypt/gcr:0=[gtk,introspection]
 	dev-libs/json-glib
 	dev-libs/libxml2:2
 	dev-libs/gmime:3.0[vala]
-	dev-libs/libpeas
+	dev-libs/libpeas:0
 	media-libs/libcanberra
 	net-libs/webkit-gtk:4=[introspection]
 	x11-libs/gtk+:3[introspection]
@@ -67,6 +64,12 @@ src_prepare() {
 	fi
 	gnome3_src_prepare
 	vala_src_prepare
+}
+src_configure() {
+	local emesonargs=(
+	  -Dprofile=release
+	)
+	meson_src_configure
 }
 pkg_postinst() {
 	gnome3_pkg_postinst
