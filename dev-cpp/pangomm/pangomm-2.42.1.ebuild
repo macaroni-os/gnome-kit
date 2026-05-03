@@ -36,6 +36,8 @@ pkg_setup() {
 src_configure() {
 	ECONF_SOURCE="${S}" gnome3_src_configure \
 		$(use_enable doc documentation)
+	sed -i -e 's|^#include <pangomm/attrlist.h>|#include <pango/pango.h>\n#include <pangomm/attrlist.h>|g' \
+	pango/pangomm/attrlist.cc
 }
 
 src_install() {
