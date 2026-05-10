@@ -27,7 +27,7 @@ RDEPEND="dev-libs/glib
 	media-libs/libmediaart:2.0
 	media-libs/gstreamer-editing-services:1.0
 	net-libs/gssdp
-	net-libs/gupnp
+	net-libs/gupnp:1.2[vala]
 	net-libs/gupnp-av
 	net-libs/libsoup:2.4
 	sys-apps/util-linux
