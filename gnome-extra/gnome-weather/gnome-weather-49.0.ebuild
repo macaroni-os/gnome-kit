@@ -34,7 +34,7 @@ pkg_postinst() {
 	gnome3_pkg_postinst
 }
 pkg_postrm() {
-	gnome3_pkg_posrm
+	gnome3_pkg_postrm
 }
 
 
