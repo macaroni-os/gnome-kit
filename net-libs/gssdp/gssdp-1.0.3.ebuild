@@ -53,4 +53,5 @@ multilib_src_configure() {
 
 multilib_src_install() {
 	gnome2_src_install
+	rm "${ED}"/usr/bin/gssdp-device-sniffer
 }
