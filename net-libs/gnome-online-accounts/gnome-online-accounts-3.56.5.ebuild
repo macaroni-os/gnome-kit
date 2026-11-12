@@ -24,6 +24,7 @@ RDEPEND="dev-libs/glib:2
 	dev-libs/json-glib
 	app-crypt/libsecret
 	net-libs/libsoup:3
+	net-libs/rest
 	sys-apps/keyutils
 	dev-libs/libxml2:2=
 	kerberos? (
@@ -51,26 +52,26 @@ src_prepare() {
 }
 src_configure() {
 	local emesonargs=(
-	  -Dgoabackend=true
-	  -Dexchange=true
-	  -Dfedora=false
-	  -Dgoogle=true
-	  -Dimap_smtp=true
-	  -Downcloud=true
-	  -Dwebdav=true
-	  -Dman=true
-	  $(meson_use kerberos)
-	  $(meson_use doc documentation)
-	  $(meson_use ms365 ms_graph)
-	  $(meson_use introspection)
-	  $(meson_use vala vapi)
+		-Dgoabackend=true
+		-Dexchange=true
+		-Dfedora=false
+		-Dgoogle=true
+		-Dimap_smtp=true
+		-Downcloud=true
+		-Dwebdav=true
+		-Dman=true
+		$(meson_use kerberos)
+		$(meson_use doc documentation)
+		$(meson_use ms365 ms_graph)
+		$(meson_use introspection)
+		$(meson_use vala vapi)
 	)
 	meson_src_configure
 }
 src_install() {
 	meson_src_install
 	if use doc; then
-	  mv "${ED}"/usr/share/doc/${PN} "${ED}"/usr/share/doc/${PF} || die
+		mv "${ED}"/usr/share/doc/${PN} "${ED}"/usr/share/doc/${PF} || die
 	fi
 }
 
