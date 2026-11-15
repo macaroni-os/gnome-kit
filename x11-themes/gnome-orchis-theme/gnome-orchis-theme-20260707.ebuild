@@ -1,0 +1,81 @@
+# Distributed under the terms of the GNU General Public License v2
+# Autogen by MARK Devkit
+
+EAPI=7
+inherit gnome3-utils xdg
+
+DESCRIPTION="Orchis is a [Material Design](https://material.io) theme for GNOME/GTK based desktop environments."
+HOMEPAGE="https://github.com/vinceliuice/Orchis-theme"
+SRC_URI="https://api.github.com/repos/vinceliuice/Orchis-theme/tarball/2026-07-07 -> gnome-orchis-theme-20260707-29975e3.tar.gz"
+LICENSE="GPL-3.0"
+SLOT="0"
+KEYWORDS="*"
+IUSE="compact solid black purple pink red orange yellow primary macos"
+RDEPEND="dev-libs/libxml2:2
+	x11-libs/gtk+:3
+	x11-themes/gtk-engines-murrine
+	
+"
+DEPEND="${RDEPEND}
+	dev-libs/glib:2
+	dev-lang/sassc
+	x11-libs/gdk-pixbuf:2
+	
+"
+
+post_src_unpack() {
+	mv vinceliuice-Orchis-theme-* ${S}
+}
+
+
+src_configure() {
+	default
+}
+src_install() {
+	local args=()
+	if use compact ; then
+	  args+=(
+	    --tweaks compact
+	  )
+	else
+	  if use solid ; then
+	    args+=(
+	      --tweaks solid
+	    )
+	  else
+	    if use black ; then
+	    args+=(
+	      --tweaks black
+	    )
+	    else
+	      if use primary ; then
+	        args+=(
+	          --tweaks primary
+	        )
+	      fi
+	    fi
+	  fi
+	fi
+	einfo "Using args: ${args[@]}"
+	${S}/install.sh -d ${D}/usr/share/themes ${args[@]}
+	for i in purple pink red orange yellow ; do
+	  if use $i ; then
+	    ${S}/install.sh -d ${D}/usr/share/themes ${args[@]} --theme $i
+	  fi
+	done
+	if use macos ; then
+	  ${S}/install.sh -d ${D}/usr/share/themes --tweaks macos -n Orchis-Macos
+	fi
+}
+pkg_postinst() {
+	xdg_pkg_postinst
+	gnome3_gconf_install
+	gnome3_gdk_pixbuf_update
+}
+pkg_postrm() {
+	xdg_pkg_postrm
+}
+
+
+
+# vim: filetype=ebuild
